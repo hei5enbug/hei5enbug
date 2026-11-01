@@ -28,7 +28,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&${{ env.LIGHT }}
+          options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&hide_rank=true&hide=stars,contribs&${{ env.LIGHT }}
           path: stats/stats-light.svg
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
           fail_on_error: true
@@ -37,7 +37,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&${{ env.DARK }}
+          options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&hide_rank=true&hide=stars,contribs&${{ env.DARK }}
           path: stats/stats-dark.svg
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
           fail_on_error: true
@@ -46,7 +46,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&${{ env.LIGHT }}
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&exclude_repo=hei5enbug-agent-setup&${{ env.LIGHT }}
           path: stats/top-langs-light.svg
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
           fail_on_error: true
@@ -55,7 +55,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&${{ env.DARK }}
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&exclude_repo=hei5enbug-agent-setup&${{ env.DARK }}
           path: stats/top-langs-dark.svg
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
           fail_on_error: true
