@@ -46,7 +46,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&exclude_repo=hei5enbug-agent-setup&${{ env.LIGHT }}
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&exclude_repo=hei5enbug-agent-setup,tabularis-azure,tabularis-spatial&${{ env.LIGHT }}
           path: stats/top-langs-light.svg
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
           fail_on_error: true
@@ -55,7 +55,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&exclude_repo=hei5enbug-agent-setup&${{ env.DARK }}
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&exclude_repo=hei5enbug-agent-setup,tabularis-azure,tabularis-spatial&${{ env.DARK }}
           path: stats/top-langs-dark.svg
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
           fail_on_error: true
