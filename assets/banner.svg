@@ -1,11 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-labelledby="t">
-  <title id="t">Byeongmin, Backend Engineer &#183; Maritime Logistics</title>
+  <title id="t">Byeongmin, Backend / Data Engineer &#183; Maritime Logistics</title>
   <style>
-    .rotor { animation: spin 48s linear infinite; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    @media (prefers-reduced-motion: reduce) { .rotor { animation: none; } }
+    .ship { animation: bob 6s ease-in-out infinite; }
+    .swell { animation: drift 9s linear infinite; }
+    @keyframes bob { 50% { transform: translateY(1.5px); } }
+    @keyframes drift { to { transform: translateX(-80px); } }
+    @media (prefers-reduced-motion: reduce) { .ship, .swell { animation: none; } }
     .name { font: 800 120px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; letter-spacing: -2px; }
-    .sub { font: 600 44px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; letter-spacing: 0.2px; }
+    .sub { font: 600 41px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; letter-spacing: 0.2px; }
   </style>
   <defs>
     <clipPath id="frame"><rect width="1280" height="320" rx="24"/></clipPath>
@@ -16,84 +18,66 @@
       <stop offset="0.775" stop-color="#4caee0"/>
       <stop offset="0.83" stop-color="#a9d4e7"/>
     </linearGradient>
-    <linearGradient id="grassBack" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f2cfa9"/>
-      <stop offset="1" stop-color="#e3b88d"/>
-    </linearGradient>
-    <linearGradient id="grassFront" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#dfb287"/>
-      <stop offset="1" stop-color="#cc9b6f"/>
+    <linearGradient id="sea" gradientUnits="userSpaceOnUse" x1="0" y1="262" x2="0" y2="320">
+      <stop offset="0" stop-color="#79c0de"/>
+      <stop offset="0.2" stop-color="#3c9dca"/>
+      <stop offset="1" stop-color="#0a6a99"/>
     </linearGradient>
     <filter id="shade" x="-5%" y="-30%" width="110%" height="160%">
       <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#00426a" flood-opacity="0.35"/>
     </filter>
-    <clipPath id="tower"><polygon points="1026,134 1086,134 1122,266 990,266"/></clipPath>
-    <g id="blade">
-      <rect x="-10" y="-100" width="32" height="74" fill="#ffffff" fill-opacity="0.22"/>
-      <path d="M-10-100H22V-26H-10ZM11-100V-26M-10-91.8H22M-10-83.6H22M-10-75.3H22M-10-67.1H22M-10-58.9H22M-10-50.7H22M-10-42.4H22M-10-34.2H22" fill="none" stroke="#ffffff" stroke-width="2"/>
-      <rect x="-3.5" y="-104" width="7" height="94" rx="2" fill="#ed6b6a"/>
-    </g>
+    <clipPath id="hull"><path d="M968 246H996L1000 250H1242L1237 300H998C988 288 976 266 968 246Z"/></clipPath>
   </defs>
 
   <g clip-path="url(#frame)">
     <rect width="1280" height="320" fill="url(#sky)"/>
-
-    <path fill="#d6eaf4" fill-opacity="0.55" d="M40 266V250h16v16zm20 0V244h14v22zm18 0V247h20v19zm24 0V241h14v25zm18 0V249h18v17zm22 0V245h14v21zm18 0V252h22v14zm26 0V243h14v23zm18 0V248h16v18zm20 0V253h24v13z"/>
 
     <g fill="#ffffff" fill-opacity="0.16">
       <path d="M796 82h108a12 12 0 0 0 0-24h-6a22 22 0 0 0-40-10a16 16 0 0 0-26 10h-36a12 12 0 0 0 0 24z"/>
       <path d="M1188 62h56a9 9 0 0 0 0-18h-4a16 16 0 0 0-29-7a12 12 0 0 0-19 7h-4a9 9 0 0 0 0 18z"/>
     </g>
 
-    <path fill="url(#grassBack)" d="M0 262C180 254 400 270 640 263S1010 254 1280 263V320H0Z"/>
-    <path fill="none" stroke="#f8dfc2" stroke-width="1.8" stroke-linecap="round" d="M70 276l-3-8M74 276v-9M78 276l3-8M300 274l-3-8M304 274v-9M308 274l3-8M560 272l-3-8M564 272v-9M568 272l3-8M820 270l-3-8M824 270v-9M828 270l3-8M1238 272l-3-8M1242 272v-9M1246 272l3-8"/>
-
-    <g transform="translate(20 0)">
-    <g>
-      <polygon points="1026,134 1042,134 1026,266 990,266" fill="#6a3c2a"/>
-      <polygon points="1042,134 1070,134 1086,266 1026,266" fill="#7b4a33"/>
-      <polygon points="1070,134 1086,134 1122,266 1086,266" fill="#583122"/>
-      <path clip-path="url(#tower)" stroke="#2e170f" stroke-opacity="0.22" stroke-width="1.4" d="M980 146H1130M980 158H1130M980 170H1130M980 182H1130M980 194H1130M980 206H1130M980 218H1130M980 230H1130M980 242H1130M980 254H1130"/>
-
-      <path fill="#f6efe6" d="M1046 160h18v22h-18z"/>
-      <path fill="#2f4a5c" d="M1049 163h12v16h-12z"/>
-      <path stroke="#f6efe6" stroke-width="1.6" d="M1055 163v16M1049 171h12"/>
-      <polygon points="1042,160 1068,160 1064,152 1046,152" fill="#ed6b6a"/>
-
-      <path fill="#f6efe6" d="M1034 222h44v28h-44z"/>
-      <path fill="#2f4a5c" d="M1037 225h38v22h-38z"/>
-      <path stroke="#f6efe6" stroke-width="1.8" d="M1049.7 225v22M1062.3 225v22M1037 236h38"/>
-      <polygon points="1028,222 1084,222 1078,212 1034,212" fill="#ed6b6a"/>
-
-      <path fill="#5f3526" d="M1114 238h36v28h-36z"/>
-      <path fill="#3e2217" d="M1124 244h14v22h-14z"/>
-      <polygon points="1108,239 1156,239 1149,228 1115,228" fill="#e2615f"/>
-
-      <polygon points="966,266 1168,266 1178,275 956,275" fill="#8a5a44"/>
-      <path fill="#e7ded3" d="M956 275h222v8H956z"/>
-
-      <path fill="#e2615f" d="M1018 140H1094L1089 126C1080 104 1032 104 1023 126Z"/>
-      <rect x="1014" y="134" width="84" height="8" rx="2" fill="#c44f4d"/>
+    <g fill="#d6eaf4" fill-opacity="0.55" stroke="#d6eaf4" stroke-opacity="0.55">
+      <path stroke="none" d="M30 262v-4h300v4zM196 258v-10h16v10zm20 0v-14h14v14zm18 0v-8h20v8zm24 0v-12h14v12zm18 0v-7h22v7z"/>
+      <path fill="none" stroke-width="2" d="M56 258V240M68 258V240M50 240H92M56 240L62 232L68 240M62 232L92 240M104 258V240M116 258V240M98 240H140M104 240L110 232L116 240M110 232L140 240M152 258V242M164 258V242M146 242H184M152 242L158 235L164 242M158 235L184 242"/>
     </g>
 
-    <g transform="translate(1056 118) rotate(22)">
-      <g class="rotor">
-        <use href="#blade"/>
-        <use href="#blade" transform="rotate(90)"/>
-        <use href="#blade" transform="rotate(180)"/>
-        <use href="#blade" transform="rotate(270)"/>
-        <circle r="10" fill="#f3ece4" stroke="#c44f4d" stroke-width="2.5"/>
-        <circle r="3.5" fill="#6d4a3a"/>
-      </g>
-    </g>
+    <rect y="262" width="1280" height="58" fill="url(#sea)"/>
+    <path stroke="#ffffff" stroke-opacity="0.45" stroke-width="1.5" d="M0 262.75H1280"/>
+    <path fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round" d="M48 276h26M120 284h18M232 272h30M330 290h22M420 278h28M520 286h16M600 274h24M690 292h20M770 280h28M870 288h18M930 274h22M1262 278h12"/>
+
+    <g transform="translate(6 0)">
+    <g class="ship">
+      <path fill="#27496d" d="M1000 242h24v11h-24zM1052 230h24v11h-24zM1078 218h24v11h-24zM1104 242h24v11h-24zM1130 230h24v11h-24zM1130 194h24v11h-24z"/>
+      <path fill="#f0caa5" d="M1000 230h24v11h-24zM1026 242h24v11h-24zM1052 218h24v11h-24zM1078 230h24v11h-24zM1078 206h24v11h-24zM1104 194h24v11h-24zM1130 242h24v11h-24zM1156 218h24v11h-24z"/>
+      <path fill="#d65d5a" d="M1026 230h24v11h-24zM1052 242h24v11h-24zM1078 194h24v11h-24zM1104 206h24v11h-24zM1130 218h24v11h-24zM1156 206h24v11h-24z"/>
+      <path fill="#a9d4e7" d="M1026 218h24v11h-24zM1078 242h24v11h-24zM1104 218h24v11h-24zM1130 206h24v11h-24zM1156 230h24v11h-24z"/>
+      <path fill="#4f97c4" d="M1052 206h24v11h-24zM1104 230h24v11h-24zM1156 242h24v11h-24z"/>
+      <path stroke="#000000" stroke-opacity="0.13" stroke-width="7" stroke-dasharray="1.2 3.2" d="M1002 247.5h20M1002 235.5h20M1028 247.5h20M1028 235.5h20M1028 223.5h20M1054 247.5h20M1054 235.5h20M1054 223.5h20M1054 211.5h20M1080 247.5h20M1080 235.5h20M1080 223.5h20M1080 211.5h20M1080 199.5h20M1106 247.5h20M1106 235.5h20M1106 223.5h20M1106 211.5h20M1106 199.5h20M1132 247.5h20M1132 235.5h20M1132 223.5h20M1132 211.5h20M1132 199.5h20M1158 247.5h20M1158 235.5h20M1158 223.5h20M1158 211.5h20"/>
+
+      <path fill="#27496d" d="M1212 180L1214 160H1227L1230 180Z"/>
+      <path fill="#ed6b6a" d="M1213.4 166H1227.6L1228.1 170.5H1212.9Z"/>
+      <path fill="#f6efe6" d="M1188 250V188H1226V250ZM1182 188V177H1232V188Z"/>
+      <path fill="#e2d8ca" d="M1218 250V188H1226V250Z"/>
+      <path fill="#27496d" d="M1185 180.5h44v4h-44zM1192 196h4v3h-4zm8 0h4v3h-4zm8 0h4v3h-4zM1192 208h4v3h-4zm8 0h4v3h-4zm8 0h4v3h-4zM1192 220h4v3h-4zm8 0h4v3h-4zm8 0h4v3h-4zM1192 232h4v3h-4zm8 0h4v3h-4zm8 0h4v3h-4z"/>
+      <path fill="none" stroke="#f6efe6" stroke-width="1.6" d="M1197 177V156M1192 161H1202"/>
+
+      <path fill="#ed6b6a" d="M968 246H996L1000 250H1242L1237 300H998C988 288 976 266 968 246Z"/>
+      <path clip-path="url(#hull)" fill="#b8484a" d="M960 282H1250V302H960Z"/>
+      <path fill="none" stroke="#f6efe6" stroke-width="2" d="M969 247H996L1000 251H1241.5"/>
+      <circle cx="985" cy="257" r="2.2" fill="#8f3a3c"/>
     </g>
 
-    <path fill="url(#grassFront)" d="M0 297C260 287 520 305 800 295S1140 288 1280 297V320H0Z"/>
-    <path fill="none" stroke="#bf8d62" stroke-width="2.2" stroke-linecap="round" d="M120 309l-4-11M127 309l1-12M134 309l4-10M420 307l-4-11M427 307l1-12M434 307l4-10M700 303l-4-11M707 303l1-12M714 303l4-10M950 301l-4-11M957 301l1-12M964 301l4-10M1200 303l-4-11M1207 303l1-12M1214 303l4-10"/>
+    <path fill="url(#sea)" d="M940 289q18-3 36 0t36 0t36 0t36 0t36 0t36 0t36 0t36 0t36 0t36 0V320H940z"/>
+    <path fill="none" stroke="#ed6b6a" stroke-opacity="0.28" stroke-width="2" stroke-linecap="round" d="M1004 295h70M1088 295h120M1020 300h56M1100 300h90M1050 305h40M1120 305h50"/>
+    <path fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" d="M984 289q6-4 12-1M974 292h16M1244 291h18M1250 296h22"/>
+    </g>
+
+    <path class="swell" fill="#0a5f8c" fill-opacity="0.35" d="M-80 302q20-4 40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0V320H-80z"/>
 
     <g filter="url(#shade)" fill="#ffffff">
-      <text class="name" x="82" y="138">Byeongmin</text>
-      <text class="sub" x="86" y="212" fill-opacity="0.95">Backend Engineer <tspan fill="#f6cfa6" fill-opacity="1">&#183;</tspan> Maritime Logistics</text>
+      <text class="name" x="82" y="134">Byeongmin</text>
+      <text class="sub" x="86" y="206" fill-opacity="0.95">Backend / Data Engineer <tspan fill="#f6cfa6" fill-opacity="1">&#183;</tspan> Maritime Logistics</text>
     </g>
   </g>
 </svg>

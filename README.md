@@ -1,8 +1,8 @@
-<img src="assets/banner.svg" alt="Byeongmin, Backend Engineer in Maritime Logistics" width="100%">
+<img src="assets/banner.svg" alt="Byeongmin, Backend / Data Engineer in Maritime Logistics" width="100%">
 
 ## Hi there
 
-I'm Byeongmin, a backend engineer working on a B2B SaaS for maritime logistics.
+I'm Byeongmin, a backend / data engineer at Tradlinx, a maritime logistics company in Korea.
 
 - Into data pipelines, geospatial data, and AI-assisted coding
 - Building tools for databases, IDEs, and AI agents on the side
